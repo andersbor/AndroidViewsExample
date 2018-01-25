@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Views Example</string>
+
+    <string-array name="countryNames">
+        <item>Australia</item>
+        <item>Bangladesh</item>
+        <item>Bulgaria</item>
+        <item>Denmark</item>
+        <item>Estonia</item>
+        <item>India</item>
+        <item>Latvia</item>
+        <item>Lithuania</item>
+        <item>Nepal</item>
+        <item>Poland</item>
+        <item>Slovakia</item>
+    </string-array>
+</resources>
