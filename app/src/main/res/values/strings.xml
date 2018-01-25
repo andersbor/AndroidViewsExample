@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">Views Example</string>
 
+    <string name="spinner_title">Country</string>
+
     <string-array name="countryNames">
         <item>Australia</item>
         <item>Bangladesh</item>

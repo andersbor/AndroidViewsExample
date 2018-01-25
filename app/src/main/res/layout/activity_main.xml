@@ -29,12 +29,13 @@
             android:layout_height="wrap_content"
             android:text="Country" />
 
-
         <Spinner
             android:id="@+id/mainCountrySpinner"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:entries="@array/countryNames"></Spinner>
+            android:entries="@array/countryNames"
+            android:prompt="@string/spinner_title"
+            android:spinnerMode="dialog"></Spinner>
     </LinearLayout>
 
     <RadioGroup
@@ -55,11 +56,6 @@
             android:layout_height="wrap_content"
             android:text="Female" />
     </RadioGroup>
-
-    <!--TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Do you want to receive our news letter?" /-->
 
     <Switch
         android:id="@+id/mainNewsSwitch"
