@@ -2,6 +2,7 @@
     <string name="app_name">Views Example</string>
 
     <string name="spinner_title">Country</string>
+    <string name="country">Country</string>
 
     <string-array name="countryNames">
         <item>Australia</item>

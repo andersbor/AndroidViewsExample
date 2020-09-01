@@ -27,7 +27,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Country" />
+            android:text="@string/country" />
 
         <Spinner
             android:id="@+id/mainCountrySpinner"
@@ -35,7 +35,7 @@
             android:layout_height="wrap_content"
             android:entries="@array/countryNames"
             android:prompt="@string/spinner_title"
-            android:spinnerMode="dialog"></Spinner>
+            android:spinnerMode="dialog" />
     </LinearLayout>
 
     <RadioGroup
@@ -66,9 +66,9 @@
     <EditText
         android:id="@+id/mainCommentsEditText"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_height="wrap_content"
         android:hint="Any comments ..."
+        android:inputType="text"
         android:visibility="gone" />
 
     <Button

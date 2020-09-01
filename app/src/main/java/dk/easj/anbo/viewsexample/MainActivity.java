@@ -21,17 +21,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         setTitle("Register");
 
-        setupEditTextFocusHandler();
         setupSpinnerEventHandler();
         setupRadioButtonListener();
-
-        Switch newsStitch = findViewById(R.id.mainNewsSwitch);
-        newsStitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
-                Log.d("MINE", "Switch " + isChecked);
-            }
-        });
+        setupSwitch();
     }
 
     private void setupRadioButtonListener() {
@@ -40,22 +32,10 @@ public class MainActivity extends AppCompatActivity {
             // https://stackoverflow.com/questions/6780981/android-radiogroup-how-to-configure-the-event-listener
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int checkedId) {
-                //Log.d("MINE", "radion " + checkedId);
+                //Log.d("MINE", "radio " + checkedId);
                 RadioButton checkedRadioButton = genderView.findViewById(checkedId);
                 boolean isChecked = checkedRadioButton.isChecked();
                 Log.d("MINE", "Radio button " + checkedRadioButton.getText() + " is checked");
-            }
-        });
-    }
-
-    private void setupEditTextFocusHandler() {
-        final EditText nameView = findViewById(R.id.mainNameEditText);
-        nameView.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-
-            @Override
-            public void onFocusChange(View view, boolean hasFocus) {
-
-                Log.d("MINE", hasFocus + " " + nameView.getText().toString());
             }
         });
     }
@@ -74,6 +54,21 @@ public class MainActivity extends AppCompatActivity {
                 // No action
             }
         });
+    }
+
+    private void setupSwitch() {
+        Switch newsStitch = findViewById(R.id.mainNewsSwitch);
+        newsStitch.setOnCheckedChangeListener(
+                new CompoundButton.OnCheckedChangeListener() {
+                    @Override
+                    public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
+                        Log.d("MINE", "Switch " + isChecked);
+                        EditText commentsView = findViewById(R.id.mainCommentsEditText);
+                        if (isChecked)
+                            commentsView.setVisibility(View.VISIBLE);
+                        else commentsView.setVisibility(View.GONE);
+                    }
+                });
     }
 
     public void registerButtonClicked(View view) {

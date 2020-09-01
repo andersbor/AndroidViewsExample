@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.TextView;
 
 public class AnotherActivity extends AppCompatActivity {
     public static final String PERSON ="person";
@@ -16,5 +17,8 @@ public class AnotherActivity extends AppCompatActivity {
         Intent data = getIntent();
         Person person = (Person)data.getSerializableExtra(PERSON);
         Log.d("MINE", ""+person.toString());
+
+        TextView messageView = findViewById(R.id.anotherMessageTextView);
+        messageView.append("\n" + person);
     }
 }
