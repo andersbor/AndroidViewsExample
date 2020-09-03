@@ -16,7 +16,7 @@
         android:id="@+id/mainNameEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Name"
+        android:hint="@string/name"
         android:inputType="textPersonName" />
 
     <LinearLayout

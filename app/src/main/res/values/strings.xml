@@ -3,6 +3,7 @@
 
     <string name="spinner_title">Country</string>
     <string name="country">Country</string>
+    <string name="name">Name</string>
 
     <string-array name="countryNames">
         <item>Australia</item>
